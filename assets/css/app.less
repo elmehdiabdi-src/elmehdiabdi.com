@@ -1,0 +1,158 @@
+@primary-color: #b76c67;
+@primary-text: white;
+@border-color: #f5f5f5;
+@black-color: #2d3436;
+
+body {
+    width: 100%;
+    color: @black-color;
+    font-size: 1em;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Cairo', sans-serif;
+    line-height: 1.5;
+    .app {
+        .header {
+            font-weight: bold;
+            align-items: center;
+            font-size: 12px;
+            display: grid;
+            height: 60px;
+            grid-auto-flow: column;
+            padding: 10px;
+            .right {
+                text-align: end;
+                .contact-me {
+                    color: @primary-color;
+                    border: 2px solid;
+                    padding: 5px 10px 5px 10px;
+                    border-radius: 5px;
+                    text-decoration: none;
+                    &:hover {
+                        color: red;
+                    }
+                }
+            }
+        }
+
+        .content {
+            display: grid;
+            grid-auto-flow: row;
+            .welcome {
+                height: 400px;
+                display: grid;
+                text-align: center;
+                place-content: center;
+                place-items: center;
+                display: grid;
+                gap: 20px;
+                .short {
+                    margin: 0px;
+                    margin: 0px;
+                    font-weight: 300;
+                }
+                .long {
+                    margin: 0px;
+                    font-weight: 100;
+                    position: relative;
+                    i {
+                        position: absolute;
+                        font-size: 10px;
+                        color: red;
+                    }
+                }
+                .picture {
+                    width: 200px;
+                    height: 200px;
+                    border-radius: 50%;
+                    height: 200px;
+                    background-position: center;
+                    background-size: contain;
+                    border-radius: 50%;
+                    background-repeat: no-repeat;
+                }
+            }
+
+            .about-me {
+                display: grid;
+                text-align: center;
+                background: @primary-color;
+                color: @primary-text;
+                padding: 50px 50px 150px 50px;
+                .short {
+                    font-size: 20px;
+                    font-weight: 500;
+                }
+                .long {
+                    font-size: 15px;
+                    font-weight: 200;
+                }
+            }
+
+            .powers-container {
+                display: grid;
+                place-content: center;
+                .powers {
+                    align-items: baseline;
+                    box-shadow: 0 5px 5px 0 rgb(233 240 243 / 50%), 0 0 0 1px #e6ecf8;
+                    position: relative;
+                    top: -100px;
+                    background: white;
+                    display: grid;
+                    grid-auto-flow: column;
+                    border-radius: 5px;
+
+                    .divider {
+                        width: 1px;
+                        height: 100%;
+                        background: @border-color;
+                    }
+
+                    .power {
+                        display: grid;
+                        gap: 10px;
+                        border-radius: 5px;
+                        width: 250px;
+                        padding: 20px;
+                        background: white;
+                        text-align: center;
+                        .title {
+                            font-size: 25px;
+                            i {
+                                padding-top: 10px;
+                                color: @primary-color;
+                            }
+                            .brief {
+                                font-size: 13px;
+                                font-weight: 300;
+                                padding-top: 10px;
+                            }
+                        }
+
+                        .muscles {
+                            .title {
+                                font-size: 15px;
+                                color: @primary-color;
+                            }
+                            .list {
+                                font-size: 13px;
+                                font-weight: 300;
+                            }
+                        }
+
+                        .energy {
+                            .title {
+                                font-size: 15px;
+                                color: @primary-color;
+                            }
+                            .list {
+                                font-size: 13px;
+                                font-weight: 300;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
